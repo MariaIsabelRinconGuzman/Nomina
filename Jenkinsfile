@@ -43,7 +43,7 @@ pipeline {
       steps {
         echo "------------>Build<------------"
 	
-	dir("hotel-service"){
+	dir("nomina-back"){
           //Construir sin tarea test que se ejecutó previamente
 	   
            sh 'gradle build -x test'
@@ -54,7 +54,7 @@ pipeline {
     stage('Tests') {
       steps {
         echo "------------>Unit Tests<------------"
-	dir("hotel-service"){
+	dir("nomina-back"){
         sh 'gradle test'
 	}
       }
@@ -75,7 +75,7 @@ pipeline {
     }
     success {
       echo 'This will run only if successful'
-      //junit 'hotel-service/**/build/test-results/test/*.xml'
+      //junit 'nomina-back/**/build/test-results/test/*.xml'
     }
     failure {
       echo 'This will run only if failed'
