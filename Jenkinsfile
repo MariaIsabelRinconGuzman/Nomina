@@ -79,7 +79,7 @@ pipeline {
     }
     failure {
       echo 'This will run only if failed'
-      mail (to: 'sebastian.agudelo@ceiba.com.co', subject: "Failed Pipeline:${currentBuild.fullDisplayName}",
+      mail (to: 'maria.rincon@ceiba.com.co', subject: "Failed Pipeline:${currentBuild.fullDisplayName}",
             body: "Something is wrong with ${env.BUILD_URL}")
     }
     unstable {
