@@ -12,6 +12,8 @@ import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.R
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class DaoEmpleadoPostgres implements DaoEmpleado {
 
