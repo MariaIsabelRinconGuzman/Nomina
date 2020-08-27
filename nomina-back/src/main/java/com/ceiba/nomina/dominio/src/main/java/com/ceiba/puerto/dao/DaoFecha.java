@@ -2,9 +2,10 @@ package com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao;
 
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
 
+import java.time.LocalDate;
 import java.util.List;
 
-public interface DaoEmpleado {
+public interface DaoFecha {
 
-    List<EmpleadoDto> consultar();
+    int consultarDiaFestivo(LocalDate fechaInicio, LocalDate fechaFin);
 }

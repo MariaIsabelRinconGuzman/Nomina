@@ -9,6 +9,8 @@ import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.R
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDateTime;
+
 @Repository
 public class DaoTurnoPostgres implements DaoTurno {
 
