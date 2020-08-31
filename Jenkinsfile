@@ -34,7 +34,7 @@ pipeline {
           submoduleCfg: [],
           userRemoteConfigs: [[
             credentialsId: 'GitHub_marigu30',
-            url:'https://github.com/MariaIsabelRinconGuzman/Nomina.git'
+            url:'https://github.com/MariaIsabelRinconGuzman/Nomina'
           ]]
         ])
       }
