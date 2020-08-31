@@ -33,8 +33,8 @@ pipeline {
           gitTool: 'Git_Centos',
           submoduleCfg: [],
           userRemoteConfigs: [[
-            credentialsId: 'GitHub_marigu301',
-            url:'https://github.com/MariaIsabelRinconGuzman/Nomina'
+            credentialsId: 'GitHub_marigu30',
+            url:'https://github.com/MariaIsabelRinconGuzman/Nomina.git'
           ]]
         ])
       }
