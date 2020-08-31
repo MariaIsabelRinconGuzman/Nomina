@@ -5,9 +5,9 @@ pipeline {
   agent {
     label 'Slave_Induccion'
   }
-  /*triggers {
+  triggers {
     pollSCM('@hourly')
-  }*/
+  }
   //Opciones específicas de Pipeline dentro del Pipeline
   options {
     //Mantener artefactos y salida de consola para el # específico de ejecuciones recientes del Pipeline.
@@ -33,7 +33,7 @@ pipeline {
           gitTool: 'Git_Centos',
           submoduleCfg: [],
           userRemoteConfigs: [[
-            credentialsId: 'GitHub_marigu',
+            credentialsId: 'GitHub_marigu301',
             url:'https://github.com/MariaIsabelRinconGuzman/Nomina'
           ]]
         ])
