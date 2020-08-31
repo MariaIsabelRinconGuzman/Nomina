@@ -18,7 +18,7 @@ public class EmpleadoEntidad  implements Serializable {
     @JoinColumn(name = "idSalario")
     private SalarioEntidad salarioEntidad;
 
-    public EmpleadoEntidad(Long idEmpleado, String nombre, Long SalarioEntidad salarioEntidad) {
+    public EmpleadoEntidad(Long idEmpleado, String nombre, SalarioEntidad salarioEntidad) {
         this.idEmpleado = idEmpleado;
         this.nombre = nombre;
         this.salarioEntidad = salarioEntidad;
