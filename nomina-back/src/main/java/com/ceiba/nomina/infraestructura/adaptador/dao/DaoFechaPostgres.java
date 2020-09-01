@@ -14,8 +14,8 @@ public class DaoFechaPostgres implements DaoFecha {
 
     private final RepositorioFechaJpa repositorioFechaJpa;
 
-    public DaoFechaPostgres(RepositorioTurnoJpa repositorioTurnoJpa) {
-        this.repositorioTurnoJpa = repositorioTurnoJpa;
+    public DaoFechaPostgres(RepositorioFechaJpa repositorioFechaJpa) {
+        this.repositorioFechaJpa = repositorioFechaJpa;
     }
 
     @Override

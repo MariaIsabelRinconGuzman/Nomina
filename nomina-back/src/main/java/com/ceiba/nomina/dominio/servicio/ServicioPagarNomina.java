@@ -29,15 +29,15 @@ public class ServicioPagarNomina {
     }
 
     public void ejecutar(){
-        LocalDate fechaPrimerPago = new LocalDateTime(LocalDateTime.now().getYear(), LocalDateTime.now().getMonthValue(),
-                15);
-        LocalDate fechaSegundoPago = new LocalDateTime(LocalDateTime.now().getYear(), LocalDateTime.now().getMonthValue(),
-                LocalDateTime.now().getMonthValue() == 2 ? 28 : 30);
+        LocalDateTime fechaPrimerPago = LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonthValue(),
+                15, 0, 0);
+        LocalDateTime fechaSegundoPago = LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonthValue(),
+                LocalDateTime.now().getMonthValue() == 2 ? 28 : 30, 0, 0);
         if(LocalDate.now().equals(fechaPrimerPago)){
             LocalDateTime diaInicialQuincena = obtenerDiaInicialQuincena();
             realizarPago(obtenerFechaPago(), diaInicialQuincena, fechaPrimerPago);
         }else if(LocalDate.now().equals(fechaSegundoPago)){
-            LocalDateTime diaInicialQuincena = new LocalDateTime(LocalDateTime.now().getYear(), LocalDateTime.now().getMonthValue(), 15);
+            LocalDateTime diaInicialQuincena = LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonthValue(), 15, 0, 0);
             realizarPago(obtenerFechaPago(), diaInicialQuincena, fechaSegundoPago);
         }
     }
@@ -74,6 +74,6 @@ public class ServicioPagarNomina {
 
     private LocalDateTime obtenerDiaInicialQuincena(){
         int dia = LocalDate.now().minusMonths(1).lengthOfMonth() <= 29 ? 28 : 30;
-        return new LocalDateTime(LocalDate.now().getYear(), LocalDate.now().getMonthValue() - 1, dia);
+        return LocalDateTime.of(LocalDate.now().getYear(), LocalDate.now().getMonthValue() - 1, dia, 0, 0);
     }
 }

@@ -11,16 +11,17 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.ArrayList;
 
 @Repository
 public class DaoEmpleadoPostgres implements DaoEmpleado {
 
-    private final RepositorioEmpleadoJpa repositorioSalarioJpa;
+    private final RepositorioEmpleadoJpa repositorioEmpleadoJpa;
     private ConvertidorListaEmpleado convertidorListaEmpleado;
     private ModelMapper modelMapper = new ModelMapper();
 
-    public DaoEmpleadoPostgres(RepositorioEmpleadoJpa repositorioSalarioJpa) {
-        this.repositorioSalarioJpa = repositorioSalarioJpa;
+    public DaoEmpleadoPostgres(RepositorioEmpleadoJpa repositorioEmpleadoJpa) {
+        this.repositorioEmpleadoJpa = repositorioEmpleadoJpa;
     }
 
     @Override
