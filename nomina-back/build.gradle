@@ -6,7 +6,7 @@ plugins {
     id "org.sonarqube" version "2.7"
 }
 
-group = 'com.ceiba.hotelmanager'
+group = 'com.ceiba.nomina'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -30,15 +30,15 @@ apply plugin: 'jacoco'
 
 dependencies {
     compile('org.modelmapper:modelmapper:1.1.0')
-    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
-    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
-
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok:1.18.10'
     annotationProcessor 'org.projectlombok:lombok:1.18.10'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     testCompile 'junit:junit:4.12'
+	testCompile group: 'org.mockito', name: 'mockito-core', version: '2.1.0'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'org.postgresql:postgresql'
     runtimeOnly 'mysql:mysql-connector-java'
