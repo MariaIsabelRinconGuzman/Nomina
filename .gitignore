@@ -1,6 +1,7 @@
 .gradle
 build
 !gradle/wrapper/gradle-wrapper.jar
+nomina-back/native/
 
 .idea
 *.iws
@@ -43,12 +44,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
-.vscode/
 
 nomina-back/gradlew
-*.bat
-*.cmd
-nomina-back/mvnw
 
 nomina-back/gradlew.bat
