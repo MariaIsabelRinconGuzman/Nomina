@@ -3,6 +3,9 @@ build
 !gradle/wrapper/gradle-wrapper.jar
 nomina-back/native/
 
+**/caches
+**/daemon
+
 .idea
 *.iws
 *.iml
