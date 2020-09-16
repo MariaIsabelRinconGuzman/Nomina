@@ -13,7 +13,7 @@ public class ManejadorConsultarSalario {
         this.servicioConsultarSalario = servicioConsultarSalario;
     }
 
-    public SalarioDto ejecutar(int idEmpleado){
+    public SalarioDto ejecutar(Long idEmpleado){
         return servicioConsultarSalario.ejecutar(idEmpleado);
     }
 }

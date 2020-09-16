@@ -11,4 +11,7 @@ public class SalarioDto {
     private String cargo;
     private int salarioBase;
     private int salarioRecargo;
+
+    public SalarioDto() {
+    }
 }

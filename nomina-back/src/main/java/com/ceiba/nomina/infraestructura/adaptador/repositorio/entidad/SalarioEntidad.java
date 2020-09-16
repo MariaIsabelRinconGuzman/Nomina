@@ -10,8 +10,6 @@ import java.io.Serializable;
 @Entity
 @Table(name = "salario")
 @Getter
-@Setter
-@AllArgsConstructor
 public class SalarioEntidad  implements Serializable {
     @Id
     private Long idSalario;
@@ -21,4 +19,14 @@ public class SalarioEntidad  implements Serializable {
     private int salarioBase;
     @Column
     private int salarioRecargo;
+
+    public SalarioEntidad(Long idSalario, String cargo, int salarioBase, int salarioRecargo) {
+        this.idSalario = idSalario;
+        this.cargo = cargo;
+        this.salarioBase = salarioBase;
+        this.salarioRecargo = salarioRecargo;
+    }
+
+    public SalarioEntidad() {
+    }
 }

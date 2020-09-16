@@ -12,7 +12,7 @@ import java.io.Serializable;
 public interface RepositorioSalarioJpa extends JpaRepository<SalarioEntidad, Serializable> {
 
     @Query("select s from SalarioEntidad s, EmpleadoEntidad e where e.idEmpleado = :idEmpleado" )
-    SalarioEntidad consultarSalarioEmpleado(int idEmpleado);
+    SalarioEntidad consultarSalarioEmpleado(Long idEmpleado);
 
 
 }

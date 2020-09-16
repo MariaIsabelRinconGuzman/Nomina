@@ -22,7 +22,7 @@ public class RepositorioSalarioPostgres implements RepositorioSalario {
     }
 
     @Override
-    public SalarioDto consultar(int idEmpleado) {
+    public SalarioDto consultar(Long idEmpleado) {
         SalarioEntidad salarioEntidad = repositorioSalarioJpa.consultarSalarioEmpleado(idEmpleado);
         return modelMapper.map(salarioEntidad, SalarioDto.class);
     }

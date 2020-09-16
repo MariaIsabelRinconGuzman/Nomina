@@ -11,7 +11,7 @@ public class ServicioConsultarSalario {
         this.repositorioSalario = repositorioSalario;
     }
 
-    public SalarioDto ejecutar(int idEmpleado){
+    public SalarioDto ejecutar(Long idEmpleado){
         return repositorioSalario.consultar(idEmpleado);
     }
 }

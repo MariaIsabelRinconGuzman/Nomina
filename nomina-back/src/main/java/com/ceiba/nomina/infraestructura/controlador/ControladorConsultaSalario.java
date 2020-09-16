@@ -18,7 +18,7 @@ public class ControladorConsultaSalario {
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public SalarioDto consultarSalario(@RequestParam int idEmpleado){
+    public SalarioDto consultarSalario(@RequestParam Long idEmpleado){
         return this.manejadorConsultarSalario.ejecutar(idEmpleado);
     }
 }
