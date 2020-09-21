@@ -2,6 +2,7 @@ package com.ceiba.nomina.aplicacion.src.main.java.com.ceiba.comando.manejador;
 
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.servicio.ServicioPagarNomina;
 import org.springframework.stereotype.Component;
+import org.springframework.scheduling.annotation.Scheduled;
 
 @Component
 public class ManejadorPagarNomina {
@@ -12,6 +13,7 @@ public class ManejadorPagarNomina {
         this.servicioPagarNomina = servicioPagarNomina;
     }
 
+    @Scheduled(cron = "0 30 01 * * ?")
     public void ejecutar(){
         servicioPagarNomina.ejecutar();
     }

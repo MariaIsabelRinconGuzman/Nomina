@@ -21,6 +21,11 @@ public class DaoTurnoPostgres implements DaoTurno {
     }
 
     @Override
+    public int consultar(LocalDateTime fecha) {
+        return repositorioTurnoJpa.consultar(fecha);
+    }
+
+    @Override
     public int consultarDiasLaborados(Long idEmpleado, LocalDateTime fechaInicio, LocalDateTime fechaFin) {
         return repositorioTurnoJpa.consultarDiasLaborados(idEmpleado, fechaInicio, fechaFin);
     }

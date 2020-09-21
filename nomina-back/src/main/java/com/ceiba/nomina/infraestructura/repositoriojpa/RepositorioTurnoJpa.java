@@ -11,6 +11,9 @@ import java.time.LocalDateTime;
 @Repository
 public interface RepositorioTurnoJpa extends JpaRepository<TurnoEntidad, Serializable> {
 
+    @Query("Select count(t.id) from TurnoEntidad t where t.fecha = :fecha")
+    int consultar(LocalDateTime fecha);
+
     @Query("Select count(t.id) from TurnoEntidad t, EmpleadoEntidad e where e.idEmpleado = :idEmpleado and t.fecha between :fechaInicio and :fechaFin" +
             " and extract(hour from t.fecha) < 18")
     int consultarDiasLaborados(Long idEmpleado, LocalDateTime fechaInicio, LocalDateTime fechaFin);
@@ -18,5 +21,4 @@ public interface RepositorioTurnoJpa extends JpaRepository<TurnoEntidad, Seriali
     @Query("Select count(t.id) from TurnoEntidad t, EmpleadoEntidad e where e.idEmpleado = :idEmpleado and t.fecha between :fechaInicio and :fechaFin" +
             " and extract(hour from t.fecha) >= 18")
     int consultarNochesLaboradas(Long idEmpleado, LocalDateTime fechaInicio, LocalDateTime fechaFin);
-
 }
