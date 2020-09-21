@@ -2,7 +2,7 @@ package com.ceiba.nomina.dominio.src.main.java.com.ceiba.servicio;
 
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Turno;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio.RepositorioTurno;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoTurno
+import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoTurno;
 import java.lang.*;
 
 import java.time.LocalDate;
