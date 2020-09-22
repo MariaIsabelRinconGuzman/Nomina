@@ -17,7 +17,7 @@ public class ManejadorCrearTurno {
         this.fabricaTurno = fabricaTurno;
     }
 
-    public void ejecutar(ComandoTurno comandoTurno){
+    public void ejecutar(ComandoTurno comandoTurno) throws Exception{
         Turno turno = fabricaTurno.crear(comandoTurno);
         servicioCrearTurno.ejecutar(turno);
     }

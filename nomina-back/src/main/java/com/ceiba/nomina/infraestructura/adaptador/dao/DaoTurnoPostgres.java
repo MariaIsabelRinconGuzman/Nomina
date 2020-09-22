@@ -8,6 +8,9 @@ import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.R
 import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.RepositorioTurnoJpa;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Repository;
+import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.TurnoDto;
+import java.util.List;
+import java.util.ArrayList;
 
 import java.time.LocalDateTime;
 
@@ -18,6 +21,11 @@ public class DaoTurnoPostgres implements DaoTurno {
 
     public DaoTurnoPostgres(RepositorioTurnoJpa repositorioTurnoJpa) {
         this.repositorioTurnoJpa = repositorioTurnoJpa;
+    }
+
+    @Override
+    public List<TurnoDto> listar(){
+        return new ArrayList<>();
     }
 
     @Override

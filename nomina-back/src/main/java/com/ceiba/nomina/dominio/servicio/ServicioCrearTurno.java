@@ -18,12 +18,13 @@ public class ServicioCrearTurno {
         this.repositorioTurno = repositorioTurno;
     }
 
-    public void ejecutar(Turno turno){
-        validarMinimoTrabajadores(turno.getFecha());
+    public void ejecutar(Turno turno) throws Exception{
+        validarMinimoTrabajadores(turno);
     }
 
-    private void validarMinimoTrabajadores(LocalDateTime fechaTurno){
-        if(fechaTurno.minusDays(1L).getDayOfMonth() > 1){
+    private void validarMinimoTrabajadores(Turno turno) throws Exception{
+        LocalDateTime fechaTurno = turno.getFecha();
+        if(fechaTurno.getDayOfMonth() > 1){
             int turnos = daoTurno.consultar(fechaTurno.minusDays(1L));
             if(turnos < 2){
                 throw new Exception("El turno del día anterior debe tener mínimo dos empleados");

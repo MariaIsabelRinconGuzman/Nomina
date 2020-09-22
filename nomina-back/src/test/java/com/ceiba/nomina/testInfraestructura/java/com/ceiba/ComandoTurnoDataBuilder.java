@@ -14,7 +14,8 @@ public class ComandoTurnoDataBuilder {
     public ComandoTurnoDataBuilder() {
         this.id = 1L;
         empleado = new EmpleadoDataBuilder().build();
-        this.fecha = LocalDateTime.now();
+        this.fecha = LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonthValue(),
+                1, 0, 0);
     }
 
     public ComandoTurno build(){

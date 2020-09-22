@@ -17,7 +17,7 @@ public class ControladorComandoTurno {
 
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
-    public void crearTurno(@RequestBody ComandoTurno comandoTurno){
+    public void crearTurno(@RequestBody ComandoTurno comandoTurno) throws Exception{
         this.manejadorCrearTurno.ejecutar(comandoTurno);
     }
 }

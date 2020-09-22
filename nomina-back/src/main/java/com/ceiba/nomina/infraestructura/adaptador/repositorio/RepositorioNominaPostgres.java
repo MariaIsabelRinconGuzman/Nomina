@@ -1,8 +1,5 @@
 package com.ceiba.nomina.infraestructura.adaptador.repositorio;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.SalarioDto;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio.RepositorioSalario;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.repositorio.entidad.SalarioEntidad;
 import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.RepositorioSalarioJpa;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Repository;
