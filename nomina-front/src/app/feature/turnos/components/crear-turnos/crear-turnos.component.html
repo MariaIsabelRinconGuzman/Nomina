@@ -1,0 +1,58 @@
+
+<section [formGroup]="form" >
+<ng-template #content let-c="close" let-d="dismiss" class="template">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title"><strong>Agregar Turno</strong></h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group col-8">
+          <span>Fecha</span>
+          <input type="datetime-local" class="form-control" formControlName="fecha">
+      </div>
+      <div class="form-group col-8">
+        <span>Empleado</span>
+        <select class="form-control" name="empleado" formControlName="empleado" >
+          <option value="" disabled>seleccione el empleado </option>
+          <option *ngFor="let empleado of empleados" [value]="empleado.nombre">{{empleado.nombre}}</option>
+        </select>
+      </div>
+      
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Save click'); agregarTurno()">Aceptar</button>
+      <button type="button" class="btn btn-outline-danger" (click)="d('Cross click')">Cancelar</button>
+    </div>
+  </ng-template>
+</section>
+<section class="contenido">
+    <h3 style="text-align: center;">Turnos</h3>
+     
+    <div class="form-group">
+        <button type="button" class="btn btn-outline-dark" (click)="open(content)">Agregar nuevo turno</button>
+    </div>
+</section>
+<section>
+  <div class="contenido" >
+    <p *ngIf="!(turnos && turnos.length)">
+      no existen registros
+    </p>
+    
+    <table class="table table-striped" *ngIf="(turnos && turnos.length)">
+        <thead>
+            <tr>
+                <th>Empleado</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let turno of turnos">
+               <td>{{turno.empleado}}</td>
+              <td>{{turno.fecha}}</td>
+           </tr>
+        </tbody>
+    </table>
+</div>
+</section>

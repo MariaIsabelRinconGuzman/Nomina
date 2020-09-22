@@ -7,7 +7,6 @@
       "severity": "warning"
     },
     "component-class-suffix": true,
-    "no-feature-imports": true,
     "contextual-lifecycle": true,
     "directive-class-suffix": true,
     "directive-selector": [
@@ -61,7 +60,6 @@
     "no-non-null-assertion": true,
     "no-redundant-jsdoc": true,
     "no-switch-case-fall-through": true,
-    "no-use-before-declare": true,
     "no-var-requires": false,
     "object-literal-key-quotes": [
       true,
@@ -74,7 +72,6 @@
       "single"
     ],
     "trailing-comma": false,
-    "no-feature-service-provided-root":true,
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,
     "no-input-rename": true,
@@ -89,8 +86,6 @@
     "use-pipe-transform-interface": true
   },
   "rulesDirectory": [
-    "rules/feature-import",
-    "rules/services-provided",
     "codelyzer"
   ]
 }

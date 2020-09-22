@@ -1,39 +1,27 @@
-### app-angular-base
+# NominaFront
 
-**Recordar adjuntar uno de los bloques con estilo para complementar este bloque.**
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
 
-Este bloque contiene la estructura necesaria para construir un proyecto en angular siguiendo la guia de estilos de angular.
+## Development server
 
-[https://angular.io/guide/styleguide#style-guide](https://angular.io/guide/styleguide#style-guide)
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Las características principales son
-- Soporte de enrutamiento
-- Manejo de seguridad
-- Soporte lazy loading
-- Arquitectura core-shared-feature
-- Directiva para mostrar errores de formularios
-- Pipe para uso de TrackBy dentro de los ngFor
-- Pruebas unitarias y e2e
-- Manejo centralizado de errores
+## Code scaffolding
 
-#### Estructura del proyecto
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Los archivos de la aplicación se encuentran en la subcarpeta src. Las pruebas iniciales correspondientes de extremo a extremo se encuentran en la subcarpeta e2e.
+## Build
 
-El proyecto base está estructurado en los módulos feature, shared y core. Asegurando una separación adecuada de las preocupaciones, lo que facilitará la escalabilidad a medida que su aplicación crezca. Lo siguiente describe brevemente cada tipo de módulo.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-##### Módulo core
-Deben estar lo transversal y de una sola instancia en la aplicación. Por ejemplo: NavBar o interceptor.
+## Running unit tests
 
-##### Módulo feature
-Deben estar los componentes que implementan funcionalidades especificas de la aplicación. Por ejemplo, el componente datos de contacto el cual es el componente que implementa la feature de contacto. Es posible tener compartidos dentro de esta feature.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-##### Módulo shared
-Deben estar componentes o utilidades comunes a las diferentes feature. Por ejemplo, un componente de un botón azul que usted desea repetir en varios lugares. Un filtro para ser utilizado en todos los componentes.
+## Running end-to-end tests
 
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-Después de importar el proyecto se muestra de la siguiente manera
+## Further help
 
-
-![enter image description here](https://drive.google.com/uc?export=download&id=1Kp5uXDxH42HE-1y1qkgx5nzUeeYnCq7A)
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

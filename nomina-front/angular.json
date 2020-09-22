@@ -1,12 +1,14 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
+  "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "app-base": {
+    "nomina-front": {
       "projectType": "application",
       "schematics": {
-        
+        "@schematics/angular:component": {
+          "style": "sass"
+        }
       },
       "root": "",
       "sourceRoot": "src",
@@ -15,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/app-base",
+            "outputPath": "dist/nomina-front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,10 +27,15 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [ 
-                        
+            "styles": [
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "src/styles.sass"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -54,9 +61,9 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
-
               ]
             }
           }
@@ -64,20 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "app-base:build",
-            "proxyConfig": "proxy.conf.json"
-
+            "browserTarget": "nomina-front:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "app-base:build:production"
+              "browserTarget": "nomina-front:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "app-base:build"
+            "browserTarget": "nomina-front:build"
           }
         },
         "test": {
@@ -92,7 +97,7 @@
               "src/assets"
             ],
             "styles": [
-               
+              "src/styles.sass"
             ],
             "scripts": []
           }
@@ -114,15 +119,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "app-base:serve"
+            "devServerTarget": "nomina-front:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "app-base:serve:production"
+              "devServerTarget": "nomina-front:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "app-base"
+  "defaultProject": "nomina-front"
 }
