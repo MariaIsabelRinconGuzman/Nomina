@@ -10,8 +10,8 @@ import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoTurno;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio.RepositorioNomina;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio.RepositorioTurno;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 public class ServicioPagarNomina {
@@ -28,36 +28,40 @@ public class ServicioPagarNomina {
         this.daoFecha = daoFecha;
     }
 
-    public void ejecutar(){
-        LocalDateTime fechaPrimerPago = LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonthValue(),
+    public int ejecutar(LocalDateTime fecha){
+        int cantidadPagos = 0;
+        LocalDateTime fechaPrimerPago = LocalDateTime.of(fecha.getYear(), fecha.getMonthValue(),
                 15, 0, 0);
-        LocalDateTime fechaSegundoPago = LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonthValue(),
-                LocalDateTime.now().getMonthValue() == 2 ? 28 : 30, 0, 0);
-        if(LocalDate.now().equals(fechaPrimerPago)){
-            LocalDateTime diaInicialQuincena = obtenerDiaInicialQuincena();
-            realizarPago(obtenerFechaPago(), diaInicialQuincena, fechaPrimerPago);
-        }else if(LocalDate.now().equals(fechaSegundoPago)){
-            LocalDateTime diaInicialQuincena = LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonthValue(), 15, 0, 0);
-            realizarPago(obtenerFechaPago(), diaInicialQuincena, fechaSegundoPago);
+        LocalDateTime fechaSegundoPago = LocalDateTime.of(fecha.getYear(), fecha.getMonthValue(),
+                fecha.getMonthValue() == 2 ? 28 : 30, 0, 0);
+        if(fecha.equals(fechaPrimerPago)){
+            LocalDateTime diaInicialQuincena = obtenerDiaInicialQuincena(fecha);
+            cantidadPagos = realizarPago(obtenerFechaPago(fecha), diaInicialQuincena, fechaPrimerPago);
+        }else if(fecha.equals(fechaSegundoPago)){
+            LocalDateTime diaInicialQuincena = LocalDateTime.of(fecha.getYear(), fecha.getMonthValue(), 15, 0, 0);
+            cantidadPagos = realizarPago(obtenerFechaPago(fecha), diaInicialQuincena, fechaSegundoPago);
         }
+        return cantidadPagos;
     }
     
-    private boolean esFestivo(LocalDate fecha){
-        return daoFecha.consultarDiaFestivo(fecha.minusDays(1), fecha.plusDays(1)) == 0 ? false : true;
+    private boolean esFestivo(LocalDateTime fecha){
+        LocalDate fechaNueva = LocalDate.of(fecha.getYear(), fecha.getMonthValue(), fecha.getDayOfMonth());
+        return daoFecha.consultarDiaFestivo(fechaNueva.minusDays(1), fechaNueva.plusDays(1)) == 0 ? false : true;
     }
 
-    private LocalDateTime obtenerFechaPago(){
-        if(esFestivo(LocalDate.now())){
-            if(esFestivo(LocalDate.now().plusDays(1))){
-                return LocalDateTime.now().plusDays(2);
+    private LocalDateTime obtenerFechaPago(LocalDateTime fecha){
+        if(esFestivo(fecha)){
+            if(esFestivo(fecha.plusDays(1))){
+                return fecha.plusDays(2);
             }else{
-                return LocalDateTime.now().plusDays(1);
+                return fecha.plusDays(1);
             }
         }
-        return LocalDateTime.now();
+        return fecha;
     }
 
-    private void realizarPago(LocalDateTime fechaPago, LocalDateTime diaInicialQuincena, LocalDateTime diaFinalQuincena){
+    private int realizarPago(LocalDateTime fechaPago, LocalDateTime diaInicialQuincena, LocalDateTime diaFinalQuincena){
+        int cantidadPagos = 0;
         List<EmpleadoDto> empleados = daoEmpleado.consultar();
         for (EmpleadoDto empleado: empleados) {
             int diasLaborados = daoTurno.consultarDiasLaborados(empleado.getIdEmpleado(), diaInicialQuincena, diaFinalQuincena);
@@ -65,15 +69,17 @@ public class ServicioPagarNomina {
             Pago pago = new Pago(null, empleado.getIdEmpleado(), fechaPago,
                     calcularSalario(empleado, diasLaborados, nochesLaboradas), diasLaborados, nochesLaboradas);
             repositorioNomina.pagar(pago);
+            cantidadPagos ++;
         }
+        return cantidadPagos;
     }
 
     private int calcularSalario(EmpleadoDto empleadoDto, int diasLaborados, int nochesLaboradas){
-        return (diasLaborados * empleadoDto.getValorDia()) + (nochesLaboradas * empleadoDto.getValorNoche());
+        return (diasLaborados * (empleadoDto.getValorDia()/30)) + (nochesLaboradas * (empleadoDto.getValorNoche()/30));
     }
 
-    private LocalDateTime obtenerDiaInicialQuincena(){
-        int dia = LocalDate.now().minusMonths(1).lengthOfMonth() <= 29 ? 28 : 30;
-        return LocalDateTime.of(LocalDate.now().getYear(), LocalDate.now().getMonthValue() - 1, dia, 0, 0);
+    private LocalDateTime obtenerDiaInicialQuincena(LocalDateTime fecha){
+        int dia = fecha.minusMonths(1).getDayOfMonth() <= 29 ? 28 : 30;
+        return LocalDateTime.of(fecha.getYear(), fecha.getMonthValue() - 1, dia, 0, 0);
     }
 }

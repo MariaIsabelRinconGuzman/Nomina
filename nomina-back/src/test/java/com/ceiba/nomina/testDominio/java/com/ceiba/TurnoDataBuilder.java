@@ -15,6 +15,11 @@ public class TurnoDataBuilder {
         this.fecha = LocalDateTime.now();
     }
 
+    public TurnoDataBuilder conFecha(LocalDateTime fecha){
+        this.fecha = fecha;
+        return this;
+    }
+
     public Turno build(){
         return new Turno(this.id, this.empleado, this.fecha);
     }
