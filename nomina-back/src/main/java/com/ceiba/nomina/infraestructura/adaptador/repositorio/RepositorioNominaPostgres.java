@@ -1,6 +1,5 @@
 package com.ceiba.nomina.infraestructura.adaptador.repositorio;
 
-import com.ceiba.nomina.infraestructura.repositoriojpa.RepositorioPagoJpa;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Repository;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Pago;
