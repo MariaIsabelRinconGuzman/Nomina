@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormGroup, FormControl } from '@angular/forms';
 import { TurnosService } from '../../shared/service/turnos.service';
+import { ListarEmpleadosService } from 'src/app/feature/shared/service/listar-empleados.service';
 
 @Component({
   selector: 'app-crear-turnos',
@@ -14,15 +15,17 @@ export class CrearTurnosComponent implements OnInit {
   turnos=[];
   form:FormGroup;
 
-  constructor(config: NgbModalConfig, private modalService: NgbModal, private turnosService:TurnosService) {
+  constructor(config: NgbModalConfig, private modalService: NgbModal, 
+    private turnosService:TurnosService,
+    private listarEmpleadosService: ListarEmpleadosService) {
     config.backdrop = 'static';
     config.keyboard = false;
   }
 
   ngOnInit(): void {
-    this.listaEmpleados();
     this.listarTurnos();
     this.formulario();
+    this.listarEmpleados();
   }
   public formulario(){
     this.form = new FormGroup({
@@ -44,30 +47,23 @@ export class CrearTurnosComponent implements OnInit {
 
   public listarTurnos(){
     console.log(this.turnosService.listarTurnos())
-    this.turnos=this.turnosService.listarTurnos();
-            
-        
+    this.turnosService.listarTurnos().
+    subscribe((data) => {
+      if (data) {
+        this.turnos = data;
+      }
+    });
+    console.log(this.turnos);
   }
 
-  public listaEmpleados(){
-    const empleado1 = {
-      id: 1,
-      nombre: "juan",
-      cargo:1
-    }
-    const empleado2 = {
-      id: 2,
-      nombre: "pedro",
-      cargo:1
-    }
-    const empleado3 = {
-      id: 3,
-      nombre: "andrea",
-      cargo:1
-    }
-    this.empleados.push(empleado1,empleado2,empleado3);
+  public listarEmpleados(){
+    this.listarEmpleadosService.listarEmpleados().
+      subscribe((data) => {
+        if (data) {
+          this.empleados = data;
+        }
+      });
     console.log(this.empleados);
-    
-
   }
+
 }

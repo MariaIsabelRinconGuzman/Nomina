@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { TurnosModule } from './feature/turnos/turnos.module';
 import { NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ListarEmpleadosModule } from './feature/listar-empleados/listar-empleados.module';
-
+import { UrlRuta } from './feature/shared/urlRuta';
+import { HttpClientModule } from '@angular/common/http';
+import { ListarEmpleadosService } from './feature/shared/service/listar-empleados.service';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,14 @@ import { ListarEmpleadosModule } from './feature/listar-empleados/listar-emplead
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     TurnosModule,
     NgbCarouselModule,
     NgbModule,
     BrowserAnimationsModule,
     ListarEmpleadosModule
   ],
-  providers: [],
+  providers: [UrlRuta, ListarEmpleadosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class PagoEntidad  implements Serializable {
     @Id
-    @GeneratedValue()
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private Long id;
     @Column
     private LocalDateTime fecha;

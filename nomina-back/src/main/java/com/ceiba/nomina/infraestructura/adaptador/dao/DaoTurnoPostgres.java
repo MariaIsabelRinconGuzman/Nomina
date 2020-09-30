@@ -3,6 +3,7 @@ package com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.dao;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoEmpleado;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoTurno;
+import com.ceiba.nomina.infraestructura.convertidor.ConvertidorListaTurno;
 import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.convertidor.ConvertidorListaEmpleado;
 import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.RepositorioEmpleadoJpa;
 import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.RepositorioTurnoJpa;
@@ -18,6 +19,7 @@ import java.time.LocalDateTime;
 public class DaoTurnoPostgres implements DaoTurno {
 
     private final RepositorioTurnoJpa repositorioTurnoJpa;
+    private ConvertidorListaTurno convertidorListaTurno = new ConvertidorListaTurno();
 
     public DaoTurnoPostgres(RepositorioTurnoJpa repositorioTurnoJpa) {
         this.repositorioTurnoJpa = repositorioTurnoJpa;
@@ -25,7 +27,8 @@ public class DaoTurnoPostgres implements DaoTurno {
 
     @Override
     public List<TurnoDto> listar(){
-        return new ArrayList<>();
+        List<TurnoDto> turnoDtoLista = new ArrayList<>();
+        return convertidorListaTurno.convertirListaTurnoEntidadAListaTurno(repositorioTurnoJpa.findAll(), turnoDtoLista);
     }
 
     @Override

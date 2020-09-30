@@ -15,8 +15,8 @@
       <div class="form-group col-8">
         <span>Empleado</span>
         <select class="form-control" name="empleado" formControlName="empleado" >
-          <option value="" disabled>seleccione el empleado </option>
-          <option *ngFor="let empleado of empleados" [value]="empleado.nombre">{{empleado.nombre}}</option>
+          <option value="" disabled>Seleccione el empleado</option>
+          <option *ngFor="let empleado of empleados" [value]="empleado">{{empleado.nombre}}</option>
         </select>
       </div>
       

@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/empleado")
+@CrossOrigin
 public class ControladorListarEmpleados {
 
     private final ManejadorListarEmpleados manejadorListarEmpleados;

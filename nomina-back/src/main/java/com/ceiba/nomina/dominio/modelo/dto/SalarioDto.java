@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class SalarioDto {
-    private Long id;
+    private Long idSalario;
     private String cargo;
     private int salarioBase;
     private int salarioRecargo;

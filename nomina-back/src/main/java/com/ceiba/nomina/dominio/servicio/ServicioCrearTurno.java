@@ -3,6 +3,7 @@ package com.ceiba.nomina.dominio.src.main.java.com.ceiba.servicio;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Turno;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio.RepositorioTurno;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoTurno;
+import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Empleado;
 import java.time.LocalDateTime;
 
 public class ServicioCrearTurno {
@@ -20,6 +21,7 @@ public class ServicioCrearTurno {
     }
 
     private void validarMinimoTrabajadores(Turno turno) throws Exception{
+        Empleado empleado = turno.getEmpleado();
         LocalDateTime fechaTurno = turno.getFecha();
         if(fechaTurno.getDayOfMonth() > 1){
             int turnos = daoTurno.consultar(fechaTurno.minusDays(1L));

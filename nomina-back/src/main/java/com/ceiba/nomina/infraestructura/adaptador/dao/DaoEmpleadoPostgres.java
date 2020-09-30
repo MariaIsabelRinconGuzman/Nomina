@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class DaoEmpleadoPostgres implements DaoEmpleado {
 
     private final RepositorioEmpleadoJpa repositorioEmpleadoJpa;
-    private ConvertidorListaEmpleado convertidorListaEmpleado;
+    private ConvertidorListaEmpleado convertidorListaEmpleado = new ConvertidorListaEmpleado();
     private ModelMapper modelMapper = new ModelMapper();
 
     public DaoEmpleadoPostgres(RepositorioEmpleadoJpa repositorioEmpleadoJpa) {

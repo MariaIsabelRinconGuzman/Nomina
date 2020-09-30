@@ -7,6 +7,9 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Date;
+
+import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.repositorio.entidad.EmpleadoEntidad;
 
 @Entity
 @Table(name = "turno")
@@ -14,13 +17,12 @@ import java.time.LocalDateTime;
 @Setter
 public class TurnoEntidad implements Serializable {
     @Id
-    @GeneratedValue()
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
     private Long id;
     @Column
+    //@Temporal(TemporalType.TIMESTAMP)
     private LocalDateTime fecha;
-    @ManyToOne()
+    @ManyToOne(optional = false, cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinColumn(name = "id_empleado")
     private EmpleadoEntidad empleadoEntidad;
-
-
 }

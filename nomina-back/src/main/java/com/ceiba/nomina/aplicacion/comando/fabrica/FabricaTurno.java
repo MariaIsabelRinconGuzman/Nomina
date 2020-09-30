@@ -8,6 +8,6 @@ import org.springframework.stereotype.Component;
 public class FabricaTurno {
 
     public Turno crear(ComandoTurno comandoTurno){
-        return new Turno(comandoTurno.getId(), comandoTurno.getEmpleado(), comandoTurno.getFecha());
+        return new Turno(comandoTurno.getEmpleado(), comandoTurno.getFecha());
     }
 }

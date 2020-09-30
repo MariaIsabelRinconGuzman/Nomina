@@ -10,6 +10,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "salario")
 @Getter
+@Setter
 public class SalarioEntidad  implements Serializable {
     @Id
     private Long idSalario;

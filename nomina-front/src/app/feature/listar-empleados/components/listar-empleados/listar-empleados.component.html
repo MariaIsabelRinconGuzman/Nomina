@@ -8,8 +8,8 @@
         </div>
         <div class="modal-body" >
           <div class="form-group col-8">
-              <span>ID</span>
-              <input type="number" class="form-control" disabled value="{{empleadoPorId.id}}">
+              <span>Id empleado</span>
+              <input type="number" class="form-control" disabled value="{{empleadoPorId.idEmpleado}}">
           </div>
           <div class="form-group col-8">
             <span>Nombre</span>
@@ -17,13 +17,16 @@
           </div>
           <div class="form-group col-8">
             <span>Cargo</span>
-            <input type="number" class="form-control" disabled value="{{empleadoPorId.cargo}}">
+            <input type="text" class="form-control" disabled value="{{empleadoPorId.salario.cargo}}">
         </div>
         <div class="form-group col-8">
-            <span>salario</span>
-            <input type="text" class="form-control" disabled value="falta mirar la consulta">
+            <span>Salario mensual básico</span>
+            <input type="number" class="form-control" disabled value="{{empleadoPorId.salario.salarioBase}}">
         </div>
-          
+        <div class="form-group col-8">
+          <span>Salario mensual con recargo</span>
+          <input type="number" class="form-control" disabled value="{{empleadoPorId.salario.salarioRecargo}}">
+      </div>  
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Aceptar</button>
@@ -49,10 +52,10 @@
           </thead>
           <tbody >
               <tr *ngFor="let empleado of empleados">
-                 <td>{{empleado.id}}</td>
+                <td>{{empleado.idEmpleado}}</td>
                 <td>{{empleado.nombre}}</td>
-                <td>{{empleado.cargo}}</td>
-                <td><button type="button" class="btn btn-info" (click)="open(content); getEmpleadoPorId(empleado.id)">consultar salario</button></td>
+                <td>{{empleado.salario.cargo}}</td>
+                <td><button type="button" class="btn btn-info" (click)="open(content); getEmpleadoPorId(empleado.id)">Consultar salario</button></td>
              </tr>
           </tbody>
       </table>
