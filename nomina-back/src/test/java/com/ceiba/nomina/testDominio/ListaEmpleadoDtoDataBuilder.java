@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
 
-public class ListaEmpleadoDataBuilder {
+public class ListaEmpleadoDtoDataBuilder {
 
     public static List<EmpleadoDto> listaEmpleados(){
         List<EmpleadoDto> listaEmpleados = new ArrayList<>();

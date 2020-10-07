@@ -9,9 +9,11 @@ public interface DaoTurno {
 
     List<TurnoDto> listar();
 
-    int consultar(LocalDateTime fecha);
+    int consultar(LocalDateTime fechaInicio, LocalDateTime fechaFin);
 
     int consultarDiasLaborados(Long idEmpleado, LocalDateTime fechaInicio, LocalDateTime fechaFin);
 
     int consultarNochesLaboradas(Long idEmpleado, LocalDateTime fechaInicio, LocalDateTime fechaFin);
+
+    int consultarEmpleadosTurno(Long idEmpleado, LocalDateTime fechaInicio, LocalDateTime fechaFin);
 }

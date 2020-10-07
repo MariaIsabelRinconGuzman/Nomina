@@ -72,8 +72,7 @@ public class ServicioPagarNomina {
     }
 
     private int calcularSalario(EmpleadoDto empleadoDto, int diasLaborados, int nochesLaboradas){
-        //return (diasLaborados * (empleadoDto.getValorDia()/30)) + (nochesLaboradas * (empleadoDto.getValorNoche()/30));
-        return 1000000;
+        return (diasLaborados * (empleadoDto.getSalario().getSalarioBase()/30)) + (nochesLaboradas * (empleadoDto.getSalario().getSalarioRecargo()/30));
     }
 
     private LocalDateTime obtenerDiaInicialQuincena(LocalDateTime fecha){

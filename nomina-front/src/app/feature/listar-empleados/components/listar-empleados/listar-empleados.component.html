@@ -26,7 +26,11 @@
         <div class="form-group col-8">
           <span>Salario mensual con recargo</span>
           <input type="number" class="form-control" disabled value="{{empleadoPorId.salario.salarioRecargo}}">
-      </div>  
+      </div>
+      <div class="form-group col-8">
+        <span>Último pago</span>
+        <input type="number" class="form-control" disabled value="{{empleadoPorId.ultimoPago}}">
+    </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Aceptar</button>

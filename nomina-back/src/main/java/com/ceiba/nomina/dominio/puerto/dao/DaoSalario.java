@@ -4,5 +4,5 @@ import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.SalarioDto;
 
 public interface DaoSalario {
 
-    SalarioDto consultar(Long idEmpleado);
+    int consultar(Long idEmpleado);
 }

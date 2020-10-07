@@ -9,7 +9,6 @@ import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoSalario;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoTurno;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoFecha;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.servicio.ServicioCrearTurno;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.servicio.ServicioConsultarSalario;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.servicio.ServicioPagarNomina;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,18 +22,13 @@ public class BeanServicio {
 	}
 
 	@Bean
-	public ServicioConsultarSalario servicioConsultarSalario(DaoSalario daoSalario){
-		return new ServicioConsultarSalario(daoSalario);
-	}
-
-	@Bean
 	public ServicioPagarNomina servicioPagarNomina(DaoEmpleado daoEmpleado, DaoTurno daoTurno, RepositorioNomina repositorioNomina, DaoFecha daoFecha) {
 		return new ServicioPagarNomina(daoEmpleado, daoTurno, repositorioNomina, daoFecha);
 	}
 
 	@Bean
-	public ServicioListarEmpleados servicioListarEmpleados(DaoEmpleado daoEmpleado){
-		return new ServicioListarEmpleados(daoEmpleado);
+	public ServicioListarEmpleados servicioListarEmpleados(DaoEmpleado daoEmpleado, DaoSalario daoSalario){
+		return new ServicioListarEmpleados(daoEmpleado, daoSalario);
 	}
 
 	@Bean

@@ -1,4 +1,3 @@
-
 <section [formGroup]="form" >
 <ng-template #content let-c="close" let-d="dismiss" class="template">
     <div class="modal-header">
@@ -16,7 +15,7 @@
         <span>Empleado</span>
         <select class="form-control" name="empleado" formControlName="empleado" >
           <option value="" disabled>Seleccione el empleado</option>
-          <option *ngFor="let empleado of empleados" [value]="empleado">{{empleado.nombre}}</option>
+          <option *ngFor="let empleado of empleados" [value]="empleado.idEmpleado">{{empleado.nombre}}</option>
         </select>
       </div>
       
@@ -49,7 +48,7 @@
         </thead>
         <tbody >
             <tr *ngFor="let turno of turnos">
-               <td>{{turno.empleado}}</td>
+               <td>{{turno.empleado.nombre}}</td>
               <td>{{turno.fecha}}</td>
            </tr>
         </tbody>

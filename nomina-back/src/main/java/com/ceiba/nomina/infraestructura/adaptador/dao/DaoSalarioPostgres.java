@@ -21,9 +21,7 @@ public class DaoSalarioPostgres implements DaoSalario{
     }
 
     @Override
-    public SalarioDto consultar(Long idEmpleado) {
-        SalarioEntidad salarioEntidad = repositorioSalarioJpa.consultarSalarioEmpleado(idEmpleado);
-        salarioEnt2= salarioEntidad;
-        return convertidorSalario.convertirSalarioDominioaEntidad(salarioEnt2);
+    public int consultar(Long idEmpleado) {
+        return repositorioSalarioJpa.consultarSalarioEmpleado(idEmpleado);
     }
 }

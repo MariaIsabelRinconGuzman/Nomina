@@ -1,8 +1,6 @@
 package com.ceiba.nomina.testDominio.java.com.ceiba;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Turno;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoTurno;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio.RepositorioTurno;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.servicio.ServicioPagarNomina;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoEmpleado;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio.RepositorioNomina;
@@ -14,8 +12,6 @@ import org.mockito.Mockito;
 import java.time.LocalDateTime;
 import java.util.List;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Pago;
-import com.ceiba.nomina.testDominio.java.com.ceiba.ListaEmpleadoDataBuilder;
 
 public class ServicioPagarNominaTest {
 
@@ -37,7 +33,7 @@ public class ServicioPagarNominaTest {
     @Test
     public void ejecutar(){
         LocalDateTime fecha = LocalDateTime.of(2020, 9, 15, 0, 0);
-        List<EmpleadoDto> empleados = ListaEmpleadoDataBuilder.listaEmpleados();
+        List<EmpleadoDto> empleados = com.ceiba.nomina.testDominio.java.com.ceiba.ListaEmpleadoDtoDataBuilder.listaEmpleados();
         Mockito.when(daoEmpleado.consultar()).thenReturn(empleados);
         Mockito.when(daoTurno.consultarDiasLaborados(Mockito.anyLong(), Mockito.any(), Mockito.any())).thenReturn(10);
         Mockito.when(daoTurno.consultarNochesLaboradas(Mockito.anyLong(), Mockito.any(), Mockito.any())).thenReturn(15);

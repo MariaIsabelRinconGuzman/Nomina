@@ -11,6 +11,6 @@ import java.io.Serializable;
 @Repository
 public interface RepositorioSalarioJpa extends JpaRepository<SalarioEntidad, Serializable> {
 
-    @Query("select e from SalarioEntidad s, EmpleadoEntidad e where e.idEmpleado = :idEmpleado" )
-    SalarioEntidad consultarSalarioEmpleado(Long idEmpleado);
+    @Query("select s.salarioTotal from PagoEntidad s, EmpleadoEntidad e where e.idEmpleado = :idEmpleado" )
+    int consultarSalarioEmpleado(Long idEmpleado);
 }

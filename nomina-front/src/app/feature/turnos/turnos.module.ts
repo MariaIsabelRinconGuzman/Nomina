@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TurnosRoutingModule } from './turnos-routing.module';
 import { CrearTurnosComponent } from './components/crear-turnos/crear-turnos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 
 
@@ -14,9 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     TurnosRoutingModule,
     FormsModule,
-    ReactiveFormsModule
-    
-    
+    ReactiveFormsModule,
+    FullCalendarModule   
   ]
 })
 export class TurnosModule { }
