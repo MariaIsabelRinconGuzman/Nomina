@@ -6,11 +6,15 @@ describe('workspace-project App', () => {
 
   beforeEach(() => {
     page = new AppPage();
+	browser.get('http://localhost:4200/nomina/turno');
   });
 
-  it('should display welcome message', () => {
+  it('Crear turno', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('nomina-front app is running!');
+	page.seleccionarBoton('botonCrearTurno');
+	page.cambiarFecha('01112020');
+	page.seleccionarEmpleado('listaEmpleados', 'g');
+	page.seleccionarBoton('botonAceptar');
   });
 
   afterEach(async () => {

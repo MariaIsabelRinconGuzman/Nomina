@@ -28,4 +28,15 @@ public class PagoEntidad  implements Serializable {
     @ManyToOne()
     @JoinColumn(name = "idEmpleado")
     private EmpleadoEntidad empleadoEntidad;
+
+    public PagoEntidad() {
+    }
+
+    public PagoEntidad(LocalDateTime fecha, int salarioTotal, int turnoDia, int turnoNoche, EmpleadoEntidad empleadoEntidad) {
+        this.fecha = fecha;
+        this.salarioTotal = salarioTotal;
+        this.turnoDia = turnoDia;
+        this.turnoNoche = turnoNoche;
+        this.empleadoEntidad = empleadoEntidad;
+    }
 }

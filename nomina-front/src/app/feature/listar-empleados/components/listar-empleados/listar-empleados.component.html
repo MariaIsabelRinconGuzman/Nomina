@@ -29,7 +29,7 @@
       </div>
       <div class="form-group col-8">
         <span>Último pago</span>
-        <input type="number" class="form-control" disabled value="{{empleadoPorId.ultimoPago}}">
+        <input type="number" class="form-control" name="inputUltimoPago" disabled value="{{empleadoPorId.ultimoPago}}">
     </div>
         </div>
         <div class="modal-footer">
@@ -59,7 +59,7 @@
                 <td>{{empleado.idEmpleado}}</td>
                 <td>{{empleado.nombre}}</td>
                 <td>{{empleado.salario.cargo}}</td>
-                <td><button type="button" class="btn btn-info" (click)="open(content); getEmpleadoPorId(empleado.id)">Consultar salario</button></td>
+                <td><button type="button" name="botonSalario" class="btn btn-info" (click)="open(content); getEmpleadoPorId(empleado.id)">Consultar salario</button></td>
              </tr>
           </tbody>
       </table>

@@ -7,6 +7,7 @@ import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoFecha;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoTurno;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio.RepositorioNomina;
 
+import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.time.LocalDate;
 import java.util.List;
@@ -25,6 +26,7 @@ public class ServicioPagarNomina {
         this.daoFecha = daoFecha;
     }
 
+    @Transactional
     public int ejecutar(LocalDateTime fecha){
         int cantidadPagos = 0;
         LocalDateTime fechaPrimerPago = LocalDateTime.of(fecha.getYear(), fecha.getMonthValue(),

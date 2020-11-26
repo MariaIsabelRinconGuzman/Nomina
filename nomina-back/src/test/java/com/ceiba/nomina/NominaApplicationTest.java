@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 //@ComponentScan("com.ceiba")
-public class ApplicationMock {
+public class NominaApplicationTest {
 
   //  @Bean
    // public DataSource h2DataSource() {

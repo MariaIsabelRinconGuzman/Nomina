@@ -21,13 +21,14 @@ public class SalarioEntidad  implements Serializable {
     @Column
     private int salarioRecargo;
 
+
+    public SalarioEntidad() {
+    }
+
     public SalarioEntidad(Long idSalario, String cargo, int salarioBase, int salarioRecargo) {
         this.idSalario = idSalario;
         this.cargo = cargo;
         this.salarioBase = salarioBase;
         this.salarioRecargo = salarioRecargo;
-    }
-
-    public SalarioEntidad() {
     }
 }

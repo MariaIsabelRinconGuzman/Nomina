@@ -70,7 +70,7 @@ export class CrearTurnosComponent implements OnInit {
         showConfirmButton: true,
       });
     }, (error) => Swal.fire({
-      title: error.message,
+      title: error.error.message,
       position: 'center',
       icon: 'error',       
       showConfirmButton: true,

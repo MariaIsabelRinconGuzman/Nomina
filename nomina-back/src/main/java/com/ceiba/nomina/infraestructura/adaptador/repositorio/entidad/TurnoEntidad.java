@@ -25,4 +25,12 @@ public class TurnoEntidad implements Serializable {
     @ManyToOne(optional = false, cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinColumn(name = "id_empleado")
     private EmpleadoEntidad empleadoEntidad;
+
+    public TurnoEntidad() {
+    }
+
+    public TurnoEntidad(LocalDateTime fecha, EmpleadoEntidad empleadoEntidad) {
+        this.fecha = fecha;
+        this.empleadoEntidad = empleadoEntidad;
+    }
 }

@@ -9,11 +9,11 @@
     <div class="modal-body">
       <div class="form-group col-8">
           <span>Fecha</span>
-          <input type="datetime-local" class="form-control" formControlName="fecha">
+          <input type="datetime-local" class="form-control" formControlName="fecha" name="fecha" id="fecha">
       </div>
       <div class="form-group col-8">
         <span>Empleado</span>
-        <select class="form-control" name="empleado" formControlName="empleado" >
+        <select class="form-control" name="empleado" formControlName="empleado" id="listaEmpleados">
           <option value="" disabled>Seleccione el empleado</option>
           <option *ngFor="let empleado of empleados" [value]="empleado.idEmpleado">{{empleado.nombre}}</option>
         </select>
@@ -21,8 +21,8 @@
       
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="c('Save click'); agregarTurno()">Aceptar</button>
-      <button type="button" class="btn btn-outline-danger" (click)="d('Cross click')">Cancelar</button>
+      <button type="button" class="btn btn-outline-dark" id="botonAceptar" (click)="c('Save click'); agregarTurno()">Aceptar</button>
+      <button type="button" class="btn btn-outline-danger" id="botonCancelar" (click)="d('Cross click')">Cancelar</button>
     </div>
   </ng-template>
 </section>
@@ -30,7 +30,7 @@
     <h3 style="text-align: center;">Turnos</h3>
      
     <div class="form-group">
-        <button type="button" class="btn btn-outline-dark" (click)="open(content)">Agregar nuevo turno</button>
+        <button type="button" name="botonCrearTurno" class="btn btn-outline-dark" (click)="open(content)">Agregar nuevo turno</button>
     </div>
 </section>
 <section>

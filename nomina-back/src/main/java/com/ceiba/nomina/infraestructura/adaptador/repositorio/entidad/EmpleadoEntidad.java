@@ -25,7 +25,7 @@ public class EmpleadoEntidad{
     public EmpleadoEntidad() {
     }
 
-    public EmpleadoEntidad(Long idEmpleado, String nombre) {
+    public EmpleadoEntidad(Long idEmpleado, String nombre, SalarioEntidad salarioEntidad) {
         this.idEmpleado = idEmpleado;
         this.nombre = nombre;
         this.salarioEntidad = salarioEntidad;

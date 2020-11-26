@@ -21,7 +21,7 @@ public class Turno {
 
     public Turno(Empleado empleado, LocalDateTime fecha) {
        // validarCampoObligatorio(empleado, EL_CAMPO_DEBE_SER_OBLIGATORIO);
-        validarFecha(fecha, LA_FECHA_DEL_TURNO_DEBE_SER_FUTURA);
+       // validarFecha(fecha, LA_FECHA_DEL_TURNO_DEBE_SER_FUTURA);
 
        // this.id = id;
         this.empleado = empleado;
@@ -39,6 +39,4 @@ public class Turno {
             throw new ExcepcionFechaInvalida(mensaje);
         }
     }
-
-
 }

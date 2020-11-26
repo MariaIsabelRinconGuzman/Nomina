@@ -4,6 +4,8 @@ import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Turno;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio.RepositorioTurno;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoTurno;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Empleado;
+
+import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 
 public class ServicioCrearTurno {
@@ -16,6 +18,7 @@ public class ServicioCrearTurno {
         this.repositorioTurno = repositorioTurno;
     }
 
+    @Transactional
     public void ejecutar(Turno turno) throws Exception{
         validarMinimoTrabajadores(turno);
     }
@@ -26,7 +29,6 @@ public class ServicioCrearTurno {
                 turno.getFecha().getDayOfMonth(), 0, 0);
         LocalDateTime fechaFin = LocalDateTime.of(turno.getFecha().getYear(), turno.getFecha().getMonthValue(),
                 turno.getFecha().getDayOfMonth(), 23, 59);
-   //     LocalDateTime fechaTurno = turno.getFecha();
         if(fechaInicio.getDayOfMonth() > 1){
             int turnos = daoTurno.consultar(fechaInicio.minusDays(1L), fechaFin.minusDays(1L));
             if(turnos < 2){
