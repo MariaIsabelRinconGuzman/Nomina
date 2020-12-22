@@ -6,13 +6,12 @@ describe('workspace-project App', () => {
 
   beforeEach(() => {
     page = new AppPage();
-	browser.get('http://localhost:4200/nomina/empleado');
+    browser.get('http://localhost:4200/nomina/empleado');
   });
 
   it('Listar empleados', () => {
-    page.navigateTo();
-	page.seleccionarBoton('botonSalario');
-	page.validarTexto('inputUltimoPago');
+    page.seleccionarBoton('botonSalario');
+    page.validarTexto('inputUltimoPago');
   });
 
   afterEach(async () => {
