@@ -4,7 +4,6 @@ import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
 import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoEmpleado;
 import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.convertidor.ConvertidorListaEmpleado;
 import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.RepositorioEmpleadoJpa;
-import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -15,7 +14,6 @@ public class DaoEmpleadoPostgres implements DaoEmpleado {
 
     private final RepositorioEmpleadoJpa repositorioEmpleadoJpa;
     private ConvertidorListaEmpleado convertidorListaEmpleado = new ConvertidorListaEmpleado();
-    private ModelMapper modelMapper = new ModelMapper();
 
     public DaoEmpleadoPostgres(RepositorioEmpleadoJpa repositorioEmpleadoJpa) {
         this.repositorioEmpleadoJpa = repositorioEmpleadoJpa;

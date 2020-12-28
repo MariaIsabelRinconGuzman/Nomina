@@ -45,7 +45,7 @@ public class ServicioPagarNomina {
     
     private boolean esFestivo(LocalDateTime fecha){
         LocalDate fechaNueva = LocalDate.of(fecha.getYear(), fecha.getMonthValue(), fecha.getDayOfMonth());
-        return daoFecha.consultarDiaFestivo(fechaNueva.minusDays(1), fechaNueva.plusDays(1)) == 0 ? false : true;
+        return daoFecha.consultarDiaFestivo(fechaNueva.minusDays(1), fechaNueva.plusDays(1)) == 0 ;
     }
 
     private LocalDateTime obtenerFechaPago(LocalDateTime fecha){

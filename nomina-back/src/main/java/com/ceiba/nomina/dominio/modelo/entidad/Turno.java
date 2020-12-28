@@ -2,7 +2,6 @@ package com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad;
 
 import com.ceiba.nomina.dominio.excepcion.ExcepcionObligatorio;
 import com.ceiba.nomina.dominio.excepcion.ExcepcionFechaInvalida;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 

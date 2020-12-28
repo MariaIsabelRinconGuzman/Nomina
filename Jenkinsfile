@@ -39,35 +39,40 @@ pipeline {
         ])
       }
     }
-    stage('Build') {
-      steps {
-        echo "------------>Build<------------"
-	
-	dir("nomina-back"){
-          //Construir sin tarea test que se ejecutó previamente
-	   
-           sh 'gradle build -x test'
-	}
+     stage('Compile & Unit Tests') {
+              steps{
 
-      }
-    }
-    stage('Tests') {
-      steps {
-        echo "------------>Unit Tests<------------"
-	dir("nomina-back"){
-        sh 'gradle test'
-	}
-      }
-    }
-    stage('Static Code Analysis') {
-      steps {
-        echo '------------>Análisis de código estático<------------'
-        withSonarQubeEnv('Sonar') {
-          sh "${tool name: 'SonarScanner',type:'hudson.plugins.sonar.SonarRunnerInstallation'}/bin/sonar-scanner"
-          // sh 'gradle sonarqube'
+ 
+
+                 echo "------------>Cleaning previous compilations<------------"
+                dir("nomina"){ 
+                 sh 'gradle --b ./build.gradle clean'
+
+ 
+
+                 echo "------------>Unit Tests<------------"
+                 sh 'gradle --b ./build.gradle test jacocoTestReport'
         }
-      }
-    }
+             }
+        }
+        stage('Static Code Analysis') {
+              steps {
+            echo '------------>Análisis de código estático<------------'
+            withSonarQubeEnv('Sonar') {
+              sh "${tool name: 'SonarScanner',type:'hudson.plugins.sonar.SonarRunnerInstallation'}/bin/sonar-scanner"
+              // sh 'gradle sonarqube'
+            }
+             }
+        }
+        stage('Build') {
+              steps {
+                    echo "------------>Build<------------"
+        dir("nomina"){ 
+                    //Construir sin tarea test que se ejecutó previamente
+                    sh 'gradle --b ./build.gradle build -x test'
+        }
+              }
+        }
   }
   post {
     always {

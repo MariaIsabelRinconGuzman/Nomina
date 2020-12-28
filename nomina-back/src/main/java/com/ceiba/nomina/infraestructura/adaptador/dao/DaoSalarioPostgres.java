@@ -12,9 +12,6 @@ import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoSalario;
 public class DaoSalarioPostgres implements DaoSalario{
 
     private RepositorioSalarioJpa repositorioSalarioJpa;
-    private ModelMapper modelMapper = new ModelMapper();
-    private ConvertidorSalario convertidorSalario = new ConvertidorSalario();
-    private SalarioEntidad salarioEnt2;
 
     public DaoSalarioPostgres(RepositorioSalarioJpa repositorioSalarioJpa) {
         this.repositorioSalarioJpa = repositorioSalarioJpa;
