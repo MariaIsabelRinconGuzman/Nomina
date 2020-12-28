@@ -45,7 +45,7 @@ pipeline {
  
 
                  echo "------------>Cleaning previous compilations<------------"
-                dir("nomina"){ 
+                dir("nomina-back"){ 
                  sh 'gradle --b ./build.gradle clean'
 
  
@@ -67,7 +67,7 @@ pipeline {
         stage('Build') {
               steps {
                     echo "------------>Build<------------"
-        dir("nomina"){ 
+        dir("nomina-back"){ 
                     //Construir sin tarea test que se ejecutó previamente
                     sh 'gradle --b ./build.gradle build -x test'
         }
