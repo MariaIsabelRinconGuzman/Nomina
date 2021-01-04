@@ -1,8 +1,8 @@
-package com.ceiba.nomina.aplicacion.src.main.java.com.ceiba.comando;
+package com.ceiba.nomina.aplicacion.comando;
 
 import lombok.*;
 import java.time.LocalDateTime;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Empleado;
+import com.ceiba.nomina.dominio.modelo.entidad.Empleado;
 
 @Getter
 @Setter

@@ -1,9 +1,9 @@
 package com.ceiba.nomina.testDominio;
 
 import com.ceiba.nomina.dominio.servicio.ServicioListarEmpleados;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoEmpleado;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoSalario;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
+import com.ceiba.nomina.dominio.puerto.dao.DaoEmpleado;
+import com.ceiba.nomina.dominio.puerto.dao.DaoSalario;
+import com.ceiba.nomina.dominio.modelo.dto.EmpleadoDto;
 import com.ceiba.nomina.testDominio.java.com.ceiba.ListaEmpleadoDtoDataBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

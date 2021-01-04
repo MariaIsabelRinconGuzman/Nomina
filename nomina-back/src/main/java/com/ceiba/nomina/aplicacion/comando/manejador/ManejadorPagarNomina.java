@@ -1,6 +1,6 @@
-package com.ceiba.nomina.aplicacion.src.main.java.com.ceiba.comando.manejador;
+package com.ceiba.nomina.aplicacion.comando.manejador;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.servicio.ServicioPagarNomina;
+import com.ceiba.nomina.dominio.servicio.ServicioPagarNomina;
 import org.springframework.stereotype.Component;
 import org.springframework.scheduling.annotation.Scheduled;
 import java.time.LocalDateTime;

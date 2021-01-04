@@ -1,6 +1,4 @@
-package com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao;
-
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
+package com.ceiba.nomina.dominio.puerto.dao;
 
 import java.time.LocalDate;
 

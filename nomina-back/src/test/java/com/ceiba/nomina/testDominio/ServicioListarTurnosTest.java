@@ -1,8 +1,8 @@
 package com.ceiba.nomina.testDominio;
 
 import com.ceiba.nomina.dominio.servicio.ServicioListarHorario;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.TurnoDto;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoTurno;
+import com.ceiba.nomina.dominio.modelo.dto.TurnoDto;
+import com.ceiba.nomina.dominio.puerto.dao.DaoTurno;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

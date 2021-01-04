@@ -1,8 +1,8 @@
 package com.ceiba.nomina.dominio.servicio;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoEmpleado;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoSalario;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
+import com.ceiba.nomina.dominio.puerto.dao.DaoEmpleado;
+import com.ceiba.nomina.dominio.puerto.dao.DaoSalario;
+import com.ceiba.nomina.dominio.modelo.dto.EmpleadoDto;
 
 import java.util.List;
 import java.util.ArrayList;

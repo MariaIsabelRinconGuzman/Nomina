@@ -1,13 +1,13 @@
 package com.ceiba.nomina.testInfraestructura;
 
 import com.ceiba.nomina.NominaApplication;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.RepositorioTurnoJpa;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.RepositorioSalarioJpa;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.RepositorioEmpleadoJpa;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.dao.DaoTurnoPostgres;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.repositorio.entidad.TurnoEntidad;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.repositorio.entidad.EmpleadoEntidad;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.repositorio.entidad.SalarioEntidad;
+import com.ceiba.nomina.infraestructura.repositoriojpa.RepositorioTurnoJpa;
+import com.ceiba.nomina.infraestructura.repositoriojpa.RepositorioSalarioJpa;
+import com.ceiba.nomina.infraestructura.repositoriojpa.RepositorioEmpleadoJpa;
+import com.ceiba.nomina.infraestructura.adaptador.dao.DaoTurnoPostgres;
+import com.ceiba.nomina.infraestructura.adaptador.repositorio.entidad.TurnoEntidad;
+import com.ceiba.nomina.infraestructura.adaptador.repositorio.entidad.EmpleadoEntidad;
+import com.ceiba.nomina.infraestructura.adaptador.repositorio.entidad.SalarioEntidad;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;

@@ -1,6 +1,6 @@
 package com.ceiba.nomina.testDominio.java.com.ceiba;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Empleado;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Turno;
+import com.ceiba.nomina.dominio.modelo.entidad.Empleado;
+import com.ceiba.nomina.dominio.modelo.entidad.Turno;
 
 import java.time.LocalDateTime;
 

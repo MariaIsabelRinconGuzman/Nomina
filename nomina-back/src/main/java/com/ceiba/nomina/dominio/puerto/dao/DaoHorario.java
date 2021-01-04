@@ -1,6 +1,6 @@
-package com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao;
+package com.ceiba.nomina.dominio.puerto.dao;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
+import com.ceiba.nomina.dominio.modelo.dto.EmpleadoDto;
 
 public interface DaoHorario {
 

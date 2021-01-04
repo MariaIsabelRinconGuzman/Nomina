@@ -1,10 +1,7 @@
-package com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio;
+package com.ceiba.nomina.dominio.puerto.repositorio;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Turno;
+import com.ceiba.nomina.dominio.modelo.entidad.Turno;
 
-/*
-
- */
 public interface RepositorioTurno {
 
     void crear(Turno turno);

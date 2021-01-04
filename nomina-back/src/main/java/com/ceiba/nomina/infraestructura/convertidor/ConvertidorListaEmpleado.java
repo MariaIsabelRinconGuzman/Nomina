@@ -1,9 +1,9 @@
-package com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.convertidor;
+package com.ceiba.nomina.infraestructura.convertidor;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.SalarioDto;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.repositorio.entidad.EmpleadoEntidad;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.repositorio.entidad.SalarioEntidad;
+import com.ceiba.nomina.dominio.modelo.dto.EmpleadoDto;
+import com.ceiba.nomina.dominio.modelo.dto.SalarioDto;
+import com.ceiba.nomina.infraestructura.adaptador.repositorio.entidad.EmpleadoEntidad;
+import com.ceiba.nomina.infraestructura.adaptador.repositorio.entidad.SalarioEntidad;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 

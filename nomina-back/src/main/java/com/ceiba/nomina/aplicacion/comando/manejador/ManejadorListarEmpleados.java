@@ -1,7 +1,7 @@
 package com.ceiba.nomina.aplicacion.comando.manejador;
 
 import com.ceiba.nomina.dominio.servicio.ServicioListarEmpleados;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
+import com.ceiba.nomina.dominio.modelo.dto.EmpleadoDto;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

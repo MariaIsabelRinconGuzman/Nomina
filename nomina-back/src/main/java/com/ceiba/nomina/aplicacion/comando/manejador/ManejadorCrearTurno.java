@@ -1,9 +1,9 @@
-package com.ceiba.nomina.aplicacion.src.main.java.com.ceiba.comando.manejador;
+package com.ceiba.nomina.aplicacion.comando.manejador;
 
-import com.ceiba.nomina.aplicacion.src.main.java.com.ceiba.comando.ComandoTurno;
-import com.ceiba.nomina.aplicacion.src.main.java.com.ceiba.comando.fabrica.FabricaTurno;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Turno;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.servicio.ServicioCrearTurno;
+import com.ceiba.nomina.aplicacion.comando.ComandoTurno;
+import com.ceiba.nomina.aplicacion.comando.fabrica.FabricaTurno;
+import com.ceiba.nomina.dominio.modelo.entidad.Turno;
+import com.ceiba.nomina.dominio.servicio.ServicioCrearTurno;
 import org.springframework.stereotype.Component;
 
 @Component

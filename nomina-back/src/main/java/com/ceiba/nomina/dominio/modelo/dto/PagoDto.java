@@ -1,4 +1,4 @@
-package com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto;
+package com.ceiba.nomina.dominio.modelo.dto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

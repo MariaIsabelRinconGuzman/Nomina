@@ -1,6 +1,6 @@
-package com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio;
+package com.ceiba.nomina.dominio.puerto.repositorio;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
+import com.ceiba.nomina.dominio.modelo.dto.EmpleadoDto;
 
 public interface RepositorioHorario {
 

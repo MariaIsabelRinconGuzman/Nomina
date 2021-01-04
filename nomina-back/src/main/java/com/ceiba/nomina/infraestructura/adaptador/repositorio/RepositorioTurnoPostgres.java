@@ -1,10 +1,10 @@
-package com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.repositorio;
+package com.ceiba.nomina.infraestructura.adaptador.repositorio;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Turno;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio.RepositorioTurno;
+import com.ceiba.nomina.dominio.modelo.entidad.Turno;
+import com.ceiba.nomina.dominio.puerto.repositorio.RepositorioTurno;
 import com.ceiba.nomina.infraestructura.convertidor.ConvertidorEmpleado;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.repositorio.entidad.TurnoEntidad;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.RepositorioTurnoJpa;
+import com.ceiba.nomina.infraestructura.adaptador.repositorio.entidad.TurnoEntidad;
+import com.ceiba.nomina.infraestructura.repositoriojpa.RepositorioTurnoJpa;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Repository;
 

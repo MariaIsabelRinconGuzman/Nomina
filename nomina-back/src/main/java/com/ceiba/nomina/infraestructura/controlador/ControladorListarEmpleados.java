@@ -1,7 +1,7 @@
 package com.ceiba.nomina.infraestructura.controlador;
 
 import com.ceiba.nomina.aplicacion.comando.manejador.ManejadorListarEmpleados;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
+import com.ceiba.nomina.dominio.modelo.dto.EmpleadoDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

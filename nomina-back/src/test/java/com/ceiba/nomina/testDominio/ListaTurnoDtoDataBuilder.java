@@ -1,6 +1,6 @@
 package com.ceiba.nomina.testDominio;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.TurnoDto;
+import com.ceiba.nomina.dominio.modelo.dto.TurnoDto;
 
 import java.util.ArrayList;
 import java.util.List;

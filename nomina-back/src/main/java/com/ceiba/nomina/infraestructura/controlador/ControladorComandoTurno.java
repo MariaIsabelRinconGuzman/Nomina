@@ -1,7 +1,7 @@
-package com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.controlador;
+package com.ceiba.nomina.infraestructura.controlador;
 
-import com.ceiba.nomina.aplicacion.src.main.java.com.ceiba.comando.ComandoTurno;
-import com.ceiba.nomina.aplicacion.src.main.java.com.ceiba.comando.manejador.ManejadorCrearTurno;
+import com.ceiba.nomina.aplicacion.comando.ComandoTurno;
+import com.ceiba.nomina.aplicacion.comando.manejador.ManejadorCrearTurno;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

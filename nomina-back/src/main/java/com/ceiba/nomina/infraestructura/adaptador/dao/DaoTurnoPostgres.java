@@ -1,11 +1,10 @@
-package com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.dao;
+package com.ceiba.nomina.infraestructura.adaptador.dao;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoTurno;
+import com.ceiba.nomina.dominio.puerto.dao.DaoTurno;
 import com.ceiba.nomina.infraestructura.convertidor.ConvertidorListaTurno;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.RepositorioTurnoJpa;
+import com.ceiba.nomina.infraestructura.repositoriojpa.RepositorioTurnoJpa;
 import org.springframework.stereotype.Repository;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.TurnoDto;
+import com.ceiba.nomina.dominio.modelo.dto.TurnoDto;
 import java.util.List;
 import java.util.ArrayList;
 

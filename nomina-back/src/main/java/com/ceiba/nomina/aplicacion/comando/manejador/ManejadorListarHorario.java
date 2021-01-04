@@ -1,7 +1,7 @@
 package com.ceiba.nomina.aplicacion.comando.manejador;
 
 import com.ceiba.nomina.dominio.servicio.ServicioListarHorario;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.TurnoDto;
+import com.ceiba.nomina.dominio.modelo.dto.TurnoDto;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

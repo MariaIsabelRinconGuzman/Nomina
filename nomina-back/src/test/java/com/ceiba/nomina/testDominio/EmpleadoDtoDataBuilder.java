@@ -1,7 +1,7 @@
 package com.ceiba.nomina.testDominio.java.com.ceiba;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.SalarioDto;
+import com.ceiba.nomina.dominio.modelo.dto.EmpleadoDto;
+import com.ceiba.nomina.dominio.modelo.dto.SalarioDto;
 
 public class EmpleadoDtoDataBuilder {
     private Long idEmpleado;

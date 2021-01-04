@@ -1,17 +1,17 @@
 package com.ceiba.nomina.testDominio.java.com.ceiba;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoTurno;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.servicio.ServicioPagarNomina;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoEmpleado;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio.RepositorioNomina;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoFecha;
+import com.ceiba.nomina.dominio.puerto.dao.DaoTurno;
+import com.ceiba.nomina.dominio.servicio.ServicioPagarNomina;
+import com.ceiba.nomina.dominio.puerto.dao.DaoEmpleado;
+import com.ceiba.nomina.dominio.puerto.repositorio.RepositorioNomina;
+import com.ceiba.nomina.dominio.puerto.dao.DaoFecha;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import java.time.LocalDateTime;
 import java.util.List;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
+import com.ceiba.nomina.dominio.modelo.dto.EmpleadoDto;
 
 public class ServicioPagarNominaTest {
 

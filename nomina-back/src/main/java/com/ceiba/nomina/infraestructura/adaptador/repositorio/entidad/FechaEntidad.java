@@ -1,4 +1,4 @@
-package com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.repositorio.entidad;
+package com.ceiba.nomina.infraestructura.adaptador.repositorio.entidad;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

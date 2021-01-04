@@ -1,15 +1,15 @@
-package com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.configuracion;
+package com.ceiba.nomina.infraestructura.configuracion;
 
 import com.ceiba.nomina.dominio.servicio.ServicioListarEmpleados;
 import com.ceiba.nomina.dominio.servicio.ServicioListarHorario;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio.RepositorioTurno;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio.RepositorioNomina;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoEmpleado;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoSalario;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoTurno;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoFecha;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.servicio.ServicioCrearTurno;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.servicio.ServicioPagarNomina;
+import com.ceiba.nomina.dominio.puerto.repositorio.RepositorioTurno;
+import com.ceiba.nomina.dominio.puerto.repositorio.RepositorioNomina;
+import com.ceiba.nomina.dominio.puerto.dao.DaoEmpleado;
+import com.ceiba.nomina.dominio.puerto.dao.DaoSalario;
+import com.ceiba.nomina.dominio.puerto.dao.DaoTurno;
+import com.ceiba.nomina.dominio.puerto.dao.DaoFecha;
+import com.ceiba.nomina.dominio.servicio.ServicioCrearTurno;
+import com.ceiba.nomina.dominio.servicio.ServicioPagarNomina;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

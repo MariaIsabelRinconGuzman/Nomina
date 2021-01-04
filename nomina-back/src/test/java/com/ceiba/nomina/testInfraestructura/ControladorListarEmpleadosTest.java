@@ -19,12 +19,12 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.hamcrest.Matchers.is;
 import org.springframework.http.MediaType;
 
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.RepositorioEmpleadoJpa;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.RepositorioSalarioJpa;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.repositorio.entidad.SalarioEntidad;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.repositorio.entidad.EmpleadoEntidad;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.repositorio.entidad.PagoEntidad;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.dao.DaoEmpleadoPostgres;
+import com.ceiba.nomina.infraestructura.repositoriojpa.RepositorioEmpleadoJpa;
+import com.ceiba.nomina.infraestructura.repositoriojpa.RepositorioSalarioJpa;
+import com.ceiba.nomina.infraestructura.adaptador.repositorio.entidad.SalarioEntidad;
+import com.ceiba.nomina.infraestructura.adaptador.repositorio.entidad.EmpleadoEntidad;
+import com.ceiba.nomina.infraestructura.adaptador.repositorio.entidad.PagoEntidad;
+import com.ceiba.nomina.infraestructura.adaptador.dao.DaoEmpleadoPostgres;
 
 import javax.persistence.Column;
 import javax.persistence.JoinColumn;

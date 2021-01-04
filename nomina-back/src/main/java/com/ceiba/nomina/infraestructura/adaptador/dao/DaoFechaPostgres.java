@@ -1,7 +1,7 @@
-package com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.dao;
+package com.ceiba.nomina.infraestructura.adaptador.dao;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoFecha;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.repositoriojpa.RepositorioFechaJpa;
+import com.ceiba.nomina.dominio.puerto.dao.DaoFecha;
+import com.ceiba.nomina.infraestructura.repositoriojpa.RepositorioFechaJpa;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;

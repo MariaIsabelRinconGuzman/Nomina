@@ -1,7 +1,7 @@
 package com.ceiba.nomina.infraestructura.convertidor;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.TurnoDto;
-import com.ceiba.nomina.infraestructura.src.main.java.com.ceiba.adaptador.repositorio.entidad.TurnoEntidad;
+import com.ceiba.nomina.dominio.modelo.dto.TurnoDto;
+import com.ceiba.nomina.infraestructura.adaptador.repositorio.entidad.TurnoEntidad;
 import org.modelmapper.ModelMapper;
 
 import java.util.List;

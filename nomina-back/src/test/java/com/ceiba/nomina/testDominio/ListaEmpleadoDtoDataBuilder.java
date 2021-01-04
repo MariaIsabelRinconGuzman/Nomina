@@ -2,7 +2,7 @@ package com.ceiba.nomina.testDominio.java.com.ceiba;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
+import com.ceiba.nomina.dominio.modelo.dto.EmpleadoDto;
 
 public class ListaEmpleadoDtoDataBuilder {
 

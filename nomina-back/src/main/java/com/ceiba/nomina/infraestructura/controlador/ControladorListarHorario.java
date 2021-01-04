@@ -1,6 +1,6 @@
 package com.ceiba.nomina.infraestructura.controlador;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.TurnoDto;
+import com.ceiba.nomina.dominio.modelo.dto.TurnoDto;
 import com.ceiba.nomina.aplicacion.comando.manejador.ManejadorListarHorario;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

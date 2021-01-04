@@ -1,11 +1,11 @@
-package com.ceiba.nomina.dominio.src.main.java.com.ceiba.servicio;
+package com.ceiba.nomina.dominio.servicio;
 
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.dto.EmpleadoDto;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad.Pago;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoEmpleado;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoFecha;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.dao.DaoTurno;
-import com.ceiba.nomina.dominio.src.main.java.com.ceiba.puerto.repositorio.RepositorioNomina;
+import com.ceiba.nomina.dominio.modelo.dto.EmpleadoDto;
+import com.ceiba.nomina.dominio.modelo.entidad.Pago;
+import com.ceiba.nomina.dominio.puerto.dao.DaoEmpleado;
+import com.ceiba.nomina.dominio.puerto.dao.DaoFecha;
+import com.ceiba.nomina.dominio.puerto.dao.DaoTurno;
+import com.ceiba.nomina.dominio.puerto.repositorio.RepositorioNomina;
 
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;

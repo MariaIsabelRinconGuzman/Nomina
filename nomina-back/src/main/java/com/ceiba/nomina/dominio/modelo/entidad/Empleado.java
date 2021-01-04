@@ -1,4 +1,4 @@
-package com.ceiba.nomina.dominio.src.main.java.com.ceiba.modelo.entidad;
+package com.ceiba.nomina.dominio.modelo.entidad;
 
 import com.ceiba.nomina.dominio.excepcion.ExcepcionObligatorio;
 import com.ceiba.nomina.dominio.modelo.entidad.Salario;
