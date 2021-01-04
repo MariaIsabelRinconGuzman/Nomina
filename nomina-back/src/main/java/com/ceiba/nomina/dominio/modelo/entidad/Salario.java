@@ -10,6 +10,9 @@ public class Salario {
     private int salarioBase;
     private int salarioRecargo;
 
+    public Salario() {
+    }
+
     public Salario(Long idSalario, String cargo, int salarioBase, int salarioRecargo) {
         this.idSalario = idSalario;
         this.cargo = cargo;

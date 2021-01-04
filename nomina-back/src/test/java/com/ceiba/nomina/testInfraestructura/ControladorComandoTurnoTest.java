@@ -5,7 +5,7 @@ import com.ceiba.nomina.infraestructura.repositoriojpa.RepositorioTurnoJpa;
 import com.ceiba.nomina.infraestructura.repositoriojpa.RepositorioSalarioJpa;
 import com.ceiba.nomina.infraestructura.repositoriojpa.RepositorioEmpleadoJpa;
 import com.ceiba.nomina.aplicacion.comando.ComandoTurno;
-import com.ceiba.nomina.testInfraestructura.java.com.ceiba.ComandoTurnoDataBuilder;
+import com.ceiba.nomina.testInfraestructura.ComandoTurnoDataBuilder;
 import com.ceiba.nomina.infraestructura.adaptador.repositorio.entidad.SalarioEntidad;
 import com.ceiba.nomina.infraestructura.adaptador.repositorio.entidad.EmpleadoEntidad;
 import org.junit.jupiter.api.BeforeEach;

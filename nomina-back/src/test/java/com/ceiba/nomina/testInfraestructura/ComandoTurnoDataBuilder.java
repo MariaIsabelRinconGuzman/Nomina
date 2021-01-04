@@ -1,4 +1,4 @@
-package com.ceiba.nomina.testInfraestructura.java.com.ceiba;
+package com.ceiba.nomina.testInfraestructura;
 import com.ceiba.nomina.aplicacion.comando.ComandoTurno;
 import com.ceiba.nomina.dominio.modelo.entidad.Empleado;
 import com.ceiba.nomina.dominio.modelo.entidad.Turno;
