@@ -1,8 +1,6 @@
 package com.ceiba.nomina.infraestructura.adaptador.repositorio.entidad;
 
-import com.ceiba.nomina.dominio.modelo.entidad.Salario;
 import lombok.Getter;
-
 import javax.persistence.*;
 import lombok.Setter;
 

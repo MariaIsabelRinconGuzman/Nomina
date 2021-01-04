@@ -11,6 +11,8 @@ import java.io.Serializable;
 @Getter
 @Setter
 public class SalarioEntidad  implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     @Id
     private Long idSalario;
     @Column
@@ -19,7 +21,6 @@ public class SalarioEntidad  implements Serializable {
     private int salarioBase;
     @Column
     private int salarioRecargo;
-
 
     public SalarioEntidad() {
     }

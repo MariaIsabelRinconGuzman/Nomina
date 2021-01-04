@@ -14,6 +14,8 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 public class FechaEntidad implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     @Id
     private Long id;
     @Column

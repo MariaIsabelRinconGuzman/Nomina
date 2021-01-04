@@ -1,8 +1,6 @@
 package com.ceiba.nomina.dominio.modelo.entidad;
 
 import com.ceiba.nomina.dominio.excepcion.ExcepcionObligatorio;
-import com.ceiba.nomina.dominio.modelo.entidad.Salario;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
