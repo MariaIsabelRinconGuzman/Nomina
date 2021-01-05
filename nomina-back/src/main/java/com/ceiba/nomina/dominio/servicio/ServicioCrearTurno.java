@@ -1,5 +1,6 @@
 package com.ceiba.nomina.dominio.servicio;
 
+import com.ceiba.nomina.dominio.excepcion.ExcepcionNegocio;
 import com.ceiba.nomina.dominio.modelo.entidad.Turno;
 import com.ceiba.nomina.dominio.puerto.repositorio.RepositorioTurno;
 import com.ceiba.nomina.dominio.puerto.dao.DaoTurno;
@@ -19,11 +20,11 @@ public class ServicioCrearTurno {
     }
 
     @Transactional
-    public void ejecutar(Turno turno) throws Exception{
+    public void ejecutar(Turno turno) throws ExcepcionNegocio{
         validarMinimoTrabajadores(turno);
     }
 
-    private void validarMinimoTrabajadores(Turno turno) throws Exception{
+    private void validarMinimoTrabajadores(Turno turno) throws ExcepcionNegocio{
         Empleado empleado = turno.getEmpleado();
         LocalDateTime fechaInicio = LocalDateTime.of(turno.getFecha().getYear(), turno.getFecha().getMonthValue(),
                 turno.getFecha().getDayOfMonth(), 0, 0);
@@ -32,13 +33,13 @@ public class ServicioCrearTurno {
         if(fechaInicio.getDayOfMonth() > 1){
             int turnos = daoTurno.consultar(fechaInicio.minusDays(1L), fechaFin.minusDays(1L));
             if(turnos < 2){
-                throw new Exception("El turno del día anterior debe tener mínimo dos empleados");
+                throw new ExcepcionNegocio("El turno del día anterior debe tener mínimo dos empleados");
             }else{
                 int empleadosTurno = daoTurno.consultarEmpleadosTurno(empleado.getIdEmpleado(), fechaInicio, fechaFin);
                 if(empleadosTurno < 1){
                     repositorioTurno.crear(turno);
                 }else{
-                    throw new Exception("El empleado solo puede realizar un turno");
+                    throw new ExcepcionNegocio("El empleado solo puede realizar un turno");
                 }
             }
         }else{

@@ -1,5 +1,6 @@
 package com.ceiba.nomina.testDominio.java.com.ceiba;
 
+import com.ceiba.nomina.dominio.excepcion.ExcepcionNegocio;
 import com.ceiba.nomina.dominio.modelo.entidad.Turno;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -25,7 +26,7 @@ public class ServicioCrearTurnoTest {
     }
 
     @Test
-    public void ejecutar() throws Exception{
+    public void ejecutar() throws ExcepcionNegocio {
         TurnoDataBuilder turnoDataBuilder = new TurnoDataBuilder();
         LocalDateTime fecha = LocalDateTime.of(LocalDateTime.now().getYear(), LocalDateTime.now().getMonthValue(),
                 1, 0, 0);
